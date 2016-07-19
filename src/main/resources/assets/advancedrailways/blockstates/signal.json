@@ -1,0 +1,67 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "textures": { },
+    "model": "advancedrailways:signal_normal_flow.obj",
+    "uvlock": true,
+    "custom": { "flip-v": true },
+    "transform": {
+      "scale": [ 1.0, 1.0, 1.0 ]
+    }
+  },
+
+  "variants": {
+    "facing": {
+      "north": {},
+      "east": {"y": 90},
+      "south": {"y": 180},
+      "west": {"y": 270}
+    },
+    "track_regime": {
+      "normal_flow": {"model": "advancedrailways:signal_normal_flow.obj"},
+      "counter_flow": {"model": "advancedrailways:signal_counter_flow.obj"}
+    },
+    "signal_state": {
+      "off": { },
+      "green": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green"} },
+      "double_yellow": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_double_yellow"} },
+      "red": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_red"} },
+      "green_yellow_horizontal": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green_yellow_horizontal"} },
+      "green_yellow_vertical": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green_yellow_vertical"} },
+      "red_white": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_red_white"} },
+      "green_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green_anim"} },
+      "double_yellow_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_double_yellow_anim"} },
+      "red_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_red_anim"} },
+      "green_yellow_horizontal_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green_yellow_horizontal_anim"} },
+      "green_yellow_vertical_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_green_yellow_vertical_anim"} },
+      "red_white_blink": {"textures": {"#lamps": "advancedrailways:models/signal/signal_lamps_red_white_anim"} }
+    },
+
+    "normal": [{
+
+    }],
+
+    "inventory": [{
+      "transform": {
+        "translation": [ 0.0, 0.0, 0.0 ],
+        "scale": [ 1, 1, 1 ],
+        "firstperson": {
+          "translation": [ 0.0, 0.0, 0.5 ],
+          "scale": [ 1.0, 1.0, 1.0 ]
+        },
+        "thirdperson": {
+          "rotation": [ { "x": 10 }, { "y": -45 }, { "z": 170} ],
+          "translation": [ -0.175, 0.0, -0.0025 ],
+          "scale": [ 0.5, 0.5, 0.5 ]
+        },
+        "fixed": {
+          "scale": [ 1, 1, 1 ]
+        },
+        "gui": {
+          "translation": [ 0.0, 0.0, 0.5 ],
+          "scale": [ 1, 1, 1 ]
+        }
+      }
+    }]
+  }
+}

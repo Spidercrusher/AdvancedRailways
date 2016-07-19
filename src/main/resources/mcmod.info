@@ -1,0 +1,16 @@
+[
+{
+  "modid": "AdvancedRailways",
+  "name": "Advanced Railways",
+  "description": "Railway Signalling!",
+  "version": "${mod_version}",
+  "mcversion": "${minecraft_version}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Spidercrusher"],
+  "credits": "Spidercrusher",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

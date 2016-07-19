@@ -1,0 +1,17 @@
+# Blocks
+tile.advancedrailways:signal.name=Signal
+tile.advancedrailways:signallingRail.name=Signalling Rail
+
+# Items
+item.advancedrailways:wrench.name=Wrench
+item.advancedrailways:walkieTalkie.name=Walkie-talkie
+
+# Creative Tab
+itemGroup.advancedrailways:signalling=Signalling
+
+# Messages
+common.advancedrailways:unknown=Unknown
+
+signalling.advancedrailways:trackFlowChanged=Track flow changed to %s
+signalling.advancedrailways:normalState=Normal Flow
+signalling.advancedrailways:counterFlow=Counter Flow
