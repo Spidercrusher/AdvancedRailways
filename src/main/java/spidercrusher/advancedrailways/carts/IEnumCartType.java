@@ -16,7 +16,7 @@ public interface IEnumCartType extends IStringSerializable {
 
     IEnumCartType getTypeFromId(int id);
 
-    Entity createCart(World world, BlockPos blockPos);
+    Entity createCart(World world, double x, double y, double z);
 
     List<String> getTooltip();
 

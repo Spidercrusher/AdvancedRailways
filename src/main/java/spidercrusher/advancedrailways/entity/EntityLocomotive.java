@@ -1,6 +1,5 @@
 package spidercrusher.advancedrailways.entity;
 
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import spidercrusher.advancedrailways.carts.EnumLocomotiveType;
 import spidercrusher.advancedrailways.carts.EnumSpeed;
@@ -16,8 +15,8 @@ public class EntityLocomotive  extends EntityARCartBase {
         this.enumLocomotiveType = enumLocomotiveType;
     }
 
-    EntityLocomotive(World worldIn, BlockPos blockPos, EnumLocomotiveType enumLocomotiveType) {
-        super(worldIn, blockPos.getX(), blockPos.getY(), blockPos.getZ());
+    EntityLocomotive(World worldIn, double x, double y, double z, EnumLocomotiveType enumLocomotiveType) {
+        super(worldIn, x, y, z);
         this.enumLocomotiveType = enumLocomotiveType;
     }
 
@@ -45,10 +44,10 @@ public class EntityLocomotive  extends EntityARCartBase {
         return enumLocomotiveType;
     }
 
-    public static EntityLocomotive create(World worldIn, BlockPos blockPos, EnumLocomotiveType enumLocomotiveType) {
+    public static EntityLocomotive create(World worldIn, double x, double y, double z, EnumLocomotiveType enumLocomotiveType) {
         switch (enumLocomotiveType) {
             case CREATIVE:
-                return new EntityLocomotiveCreative(worldIn, blockPos);
+                return new EntityLocomotiveCreative(worldIn, x, y, z);
 
             default:
                 throw new MissingEnumConstantException(EnumLocomotiveType.class, enumLocomotiveType.getName());

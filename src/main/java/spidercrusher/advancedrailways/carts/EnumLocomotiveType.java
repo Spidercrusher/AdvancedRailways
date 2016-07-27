@@ -72,7 +72,7 @@ public enum EnumLocomotiveType implements IEnumCartType {
     }
 
     @Override
-    public EntityLocomotive createCart(World world, BlockPos blockPos) {
-        return EntityLocomotive.create(world, blockPos, this);
+    public EntityLocomotive createCart(World world, double x, double y, double z) {
+        return EntityLocomotive.create(world, x, y, z, this);
     }
 }

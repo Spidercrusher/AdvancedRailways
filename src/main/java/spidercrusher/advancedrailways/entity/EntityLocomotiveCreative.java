@@ -1,6 +1,5 @@
 package spidercrusher.advancedrailways.entity;
 
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import spidercrusher.advancedrailways.carts.EnumLocomotiveType;
 
@@ -10,7 +9,7 @@ public class EntityLocomotiveCreative extends EntityLocomotive {
         super(worldIn, EnumLocomotiveType.CREATIVE);
     }
 
-    public EntityLocomotiveCreative(World worldIn, BlockPos blockPos) {
-        super(worldIn, blockPos, EnumLocomotiveType.CREATIVE);
+    public EntityLocomotiveCreative(World worldIn, double x, double y, double z) {
+        super(worldIn, x, y, z, EnumLocomotiveType.CREATIVE);
     }
 }

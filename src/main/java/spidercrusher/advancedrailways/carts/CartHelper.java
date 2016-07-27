@@ -8,9 +8,9 @@ import spidercrusher.advancedrailways.reference.Reference;
 
 public class CartHelper {
 
-    public static EntityARCartBase createCart(World world, BlockPos blockPos, IEnumCartType iEnumCartType) {
+    public static EntityARCartBase createCart(World world, double x, double y, double z, IEnumCartType iEnumCartType) {
         if (iEnumCartType instanceof EnumLocomotiveType) {
-            return EntityLocomotive.create(world, blockPos, (EnumLocomotiveType) iEnumCartType);
+            return EntityLocomotive.create(world, x, y, z, (EnumLocomotiveType) iEnumCartType);
 
         } else {
             throw new IllegalArgumentException("Cannot create " + Reference.MOD_NAME + " cart for iEnumCartType " + iEnumCartType + "!");

@@ -66,7 +66,7 @@ public class ItemARCart extends ItemMinecart {
                     d0 = 0.5D;
                 }
 
-                EntityARCartBase entityARCartBase = CartHelper.createCart(worldIn, blockPos.add(0.5D, 0.0625D + d0, 0.5D), iEnumCartType);
+                EntityARCartBase entityARCartBase = CartHelper.createCart(worldIn, blockPos.getX() + 0.5D, blockPos.getX() + 0.0625D + d0, blockPos.getX() + 0.5D, iEnumCartType);
 
                 if (stack.hasDisplayName()) {
                     entityARCartBase.setCustomNameTag(stack.getDisplayName());
