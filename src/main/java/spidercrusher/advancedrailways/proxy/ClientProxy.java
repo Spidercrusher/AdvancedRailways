@@ -13,7 +13,7 @@ public class ClientProxy extends CommonProxy {
 
     @Override
     public void initRenderingAndTextures() {
-        OBJLoader.INSTANCE.addDomain(Reference.LOWERCASE_MOD_ID);
+        OBJLoader.INSTANCE.addDomain(Reference.MOD_ID);
 
         ModItems.initRenderers();
         ModBlocks.initRenderers();

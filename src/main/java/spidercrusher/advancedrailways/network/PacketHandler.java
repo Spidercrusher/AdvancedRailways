@@ -18,7 +18,7 @@ public class PacketHandler {
     private static final int MAX_PACKET_ID = 255;
 
     public static void init() {
-        INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.LOWERCASE_MOD_ID);
+        INSTANCE = NetworkRegistry.INSTANCE.newSimpleChannel(Reference.MOD_ID);
 
         INSTANCE.registerMessage(MessageTileEntityAR.Handler.class, MessageTileEntityAR.class, packetID, Side.CLIENT);
     }

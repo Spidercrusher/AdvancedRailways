@@ -2,8 +2,7 @@ package spidercrusher.advancedrailways.reference;
 
 public class Reference {
 
-    public static final String MOD_ID = "AdvancedRailways";
-    public static final String LOWERCASE_MOD_ID = MOD_ID.toLowerCase();
+    public static final String MOD_ID = "advancedrailways";
     public static final String MOD_NAME = "Advanced Railways";
     // public static final String FINGERPRINT = "@FINGERPRINT@";
     public static final String MOD_VERSION = "@MOD_VERSION@";
