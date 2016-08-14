@@ -1,7 +1,7 @@
 package spidercrusher.advancedrailways.carts;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import spidercrusher.advancedrailways.entity.EntityLocomotive;
 import spidercrusher.advancedrailways.entity.EntityLocomotiveCreative;
@@ -9,6 +9,7 @@ import spidercrusher.advancedrailways.item.ItemARCart;
 import spidercrusher.advancedrailways.reference.EntityIDs;
 import spidercrusher.advancedrailways.reference.Messages;
 import spidercrusher.advancedrailways.reference.Names;
+import spidercrusher.advancedrailways.reference.Textures;
 import spidercrusher.advancedrailways.util.Utils;
 
 import java.util.List;
@@ -26,7 +27,8 @@ public enum EnumLocomotiveType implements IEnumCartType {
     private Class<? extends EntityLocomotive> entityLocomotiveClass;
     private final EnumSpeed maxSpeed;
     private List<String> tooltip;
-    private final ItemARCart instance;
+    private final ItemARCart itemInstance;
+    private final ResourceLocation textureResourceLocation;
 
     EnumLocomotiveType(int entityId, Class<? extends EntityLocomotive> entityLocomotiveClass, String name, EnumSpeed maxSpeed) {
         this.entityId = entityId;
@@ -34,7 +36,8 @@ public enum EnumLocomotiveType implements IEnumCartType {
         this.entityLocomotiveClass = entityLocomotiveClass;
         this.maxSpeed = maxSpeed;
         this.tooltip = Utils.getLocalizedTooltip(Messages.Tooltip.LOCOMOTIVE);
-        this.instance = new ItemARCart(this);
+        this.itemInstance = new ItemARCart(this);
+        this.textureResourceLocation = Textures.getTextureResourceLocation(Textures.Entity.BASE_PATH, name);
     }
 
     @Override
@@ -63,7 +66,11 @@ public enum EnumLocomotiveType implements IEnumCartType {
 
     @Override
     public ItemARCart getItemInstance() {
-        return instance;
+        return itemInstance;
+    }
+
+    public ResourceLocation getTextureResourceLocation() {
+        return textureResourceLocation;
     }
 
     @Override

@@ -18,6 +18,8 @@ import spidercrusher.advancedrailways.carts.EnumLocomotiveType;
 import spidercrusher.advancedrailways.carts.IEnumCartType;
 import spidercrusher.advancedrailways.creativetab.CreativeTab;
 import spidercrusher.advancedrailways.entity.EntityARCartBase;
+import spidercrusher.advancedrailways.reference.Reference;
+import spidercrusher.advancedrailways.util.Utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -66,7 +68,7 @@ public class ItemARCart extends ItemMinecart {
                     d0 = 0.5D;
                 }
 
-                EntityARCartBase entityARCartBase = CartHelper.createCart(worldIn, blockPos.getX() + 0.5D, blockPos.getX() + 0.0625D + d0, blockPos.getX() + 0.5D, iEnumCartType);
+                EntityARCartBase entityARCartBase = CartHelper.createCart(worldIn, blockPos.getX() + 0.5D, blockPos.getY() + 0.0625D + d0, blockPos.getZ() + 0.5D, iEnumCartType);
 
                 if (stack.hasDisplayName()) {
                     entityARCartBase.setCustomNameTag(stack.getDisplayName());
@@ -84,6 +86,11 @@ public class ItemARCart extends ItemMinecart {
 
     public IEnumCartType getIEnumCartType() {
         return iEnumCartType;
+    }
+
+    @Override
+    public String getItemStackDisplayName(ItemStack stack) {
+        return Utils.getLocalizedText("entity." + Reference.MOD_ID + ":" + ((ItemARCart) stack.getItem()).getIEnumCartType().getName() + ".name");
     }
 
     @Override
